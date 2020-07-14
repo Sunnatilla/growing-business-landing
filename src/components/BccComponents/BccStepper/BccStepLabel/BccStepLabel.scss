@@ -1,0 +1,13 @@
+.stepCircle {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 3px solid #e6eaf0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  &.done {
+    background-color: #179f50;
+    border: 2px solid #27ae60;
+  }
+}

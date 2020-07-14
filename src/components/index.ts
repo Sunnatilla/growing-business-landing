@@ -1,0 +1,10 @@
+export { default as Loading } from "./Loading";
+export { default as Banner } from "./Banner";
+export { default as Benefits } from "./Benefits";
+export { default as Order } from "./Order";
+export { default as Additional } from "./Additional";
+export { default as Starbusiness } from "./Starbusiness";
+export { default as CallUs } from "./CallUs";
+export { default as Useful } from "./Useful";
+export { default as Tabs } from "./Tabs";
+export { default as Footer } from "./Footer";

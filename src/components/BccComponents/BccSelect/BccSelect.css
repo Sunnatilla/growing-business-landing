@@ -1,0 +1,28 @@
+.react-select__menu {
+  border: 1px solid #27ae60 !important;
+  margin-top: 0 !important;
+  border-top: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  box-shadow: none !important; }
+  .react-select__menu > div > div {
+    background-color: white; }
+  .react-select__menu > div > div.css-9gakcf-option {
+    color: #27ae60; }
+  .react-select__menu > div > div:hover {
+    background-color: #e9f7ef; }
+
+.react-select__control {
+  min-width: 200px; }
+  .react-select__control--is-focused {
+    border: 1px solid #27ae60 !important;
+    box-shadow: none !important; }
+  .react-select__control--menu-is-open {
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-color: #27ae60 !important;
+    border-bottom: 1px !important;
+    box-shadow: none !important; }

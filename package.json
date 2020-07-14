@@ -1,0 +1,63 @@
+{
+  "homepage": "https://abkeyev.github.io/growing-business",
+  "name": "growing-business",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.50",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-maskedinput": "^4.0.4",
+    "@types/react-scroll": "^1.5.5",
+    "@types/react-select": "^3.0.14",
+    "@types/react-swipeable-views": "^0.13.0",
+    "animate.css": "^3.7.2",
+    "axios": "^0.19.2",
+    "i18next": "^19.6.0",
+    "i18next-browser-languagedetector": "^4.3.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "moment": "^2.27.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-block-ui": "^1.3.3",
+    "react-dom": "^16.12.0",
+    "react-ga": "^2.7.0",
+    "react-i18next": "^11.7.0",
+    "react-maskedinput": "^4.0.1",
+    "react-scripts": "3.3.0",
+    "react-scroll": "^1.8.0",
+    "react-select": "^3.1.0",
+    "smart-app-banner": "^2.0.0",
+    "typescript": "^3.9.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
