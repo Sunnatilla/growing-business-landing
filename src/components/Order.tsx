@@ -219,8 +219,8 @@ const BccMaskedInput = (props: TextMaskCustomProps) => {
     <MaskedInput
       {...other}
       ref={(ref: any) => inputRef(ref ? ref.inputElement : null)}
-      mask="7(111) 111 11 11"
-      placeholder={"7(707) 707 77 77"}
+      mask="+7(111) 111 11 11"
+      placeholder={"+7(707) 707 77 77"}
     />
   );
 };
@@ -277,7 +277,7 @@ const Order = (props: any) => {
 
   const formatPhoneNumber = () => {
     let res = phone;
-    if (phone.slice(0, 1) === "8") res = "7" + phone.slice(1);
+    if (phone.slice(0, 1) === "8") res = "+7" + phone.slice(1);
     return res.replace(/\(|\)| /g, "");
   };
 
@@ -287,7 +287,7 @@ const Order = (props: any) => {
         env: {
           production: webConfigEnv.PRODUCTION === "1",
         },
-        client: {
+        requestInfo: {
           fio: fio,
           iin: iin,
           phone: formatPhoneNumber(),
@@ -308,7 +308,7 @@ const Order = (props: any) => {
   };
 
   const getOtp = () => {
-    if (phone.substr(2, 1) !== "7") {
+    if (phone.substr(3, 1) !== "7") {
       setPhoneError(true);
       return;
     } else setPhoneError(false);
@@ -370,7 +370,7 @@ const Order = (props: any) => {
         sum.length > 1 &&
         +period > 1 &&
         iin.length === 12 &&
-        phone.replace("_", "").length === 16 &&
+        phone.replace("_", "").length === 17 &&
         agree
       );
     else if (step === 1) return code.length === 6;
@@ -557,9 +557,12 @@ const Order = (props: any) => {
                       </Grid>
                       <Grid item>
                         <BccTypography type="p3">
-                          Подтверждаю согласие на сбор и обработку персональных
-                          данных, включая получение информации и кредитного
-                          отчета с ТОО «Первое кредитное бюро» и ГБД ЮЛ.
+                          Подтверждаю{" "}
+                          <a href="agreement.pdf" target="_blank">
+                            согласие на сбор и обработку персональных данных
+                          </a>{" "}
+                          , включая получение информации и кредитного отчета с
+                          ТОО «Первое кредитное бюро» и ГБД ЮЛ.
                         </BccTypography>
                       </Grid>
                     </Grid>
