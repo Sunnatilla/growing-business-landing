@@ -258,7 +258,7 @@ const Order = (props: any) => {
   const [period, setPeriod] = React.useState("");
   const [iin, setIin] = React.useState("");
   const [city, setCity] = React.useState("");
-  const [type, setType] = React.useState("ip");
+  const [type, setType] = React.useState("0");
   const [isLoading, setLoading] = React.useState(false);
   const [phoneError, setPhoneError] = React.useState<boolean>(false);
   const [openError, setOpenError] = React.useState(false);
@@ -288,6 +288,7 @@ const Order = (props: any) => {
           production: webConfigEnv.PRODUCTION === "1",
         },
         requestInfo: {
+          type,
           fio: fio,
           iin: iin,
           phone: formatPhoneNumber(),
@@ -433,13 +434,13 @@ const Order = (props: any) => {
                         onChange={(e: any) => setType(e.target.value)}
                       >
                         <BccFormControlLabel
-                          value="ip"
+                          value="0"
                           control={<BccRadio />}
                           label="Индивидуальный предприниматель"
                           labelPlacement="end"
                         />
                         <BccFormControlLabel
-                          value="ul"
+                          value="1"
                           control={<BccRadio />}
                           label="Юридическое лицо"
                           labelPlacement="end"
@@ -451,7 +452,7 @@ const Order = (props: any) => {
                     <BccInput
                       className={classes.inputStyle}
                       fullWidth
-                      label={type === "ul" ? "Наименование компании*" : "ФИО*"}
+                      label={type === "1" ? "Наименование компании*" : "ФИО*"}
                       variant="filled"
                       id="fio"
                       name="fio"
@@ -463,7 +464,7 @@ const Order = (props: any) => {
                     <BccInput
                       fullWidth={true}
                       className={classes.inputStyle}
-                      label={type === "ul" ? "БИН*" : "ИИН*"}
+                      label={type === "1" ? "БИН*" : "ИИН*"}
                       id="iin"
                       name="iin"
                       value={iin}

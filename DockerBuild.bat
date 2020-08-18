@@ -1,0 +1,1 @@
+docker build -t growing_business . --build-arg HTTP_PROXY=http://axakalos:Beksultan97!!!@proxy-ws.cbank.kz:8080/ --build-arg HTTPS_PROXY=http://axakalos:Beksultan97!!!@proxy-ws.cbank.kz:8080
